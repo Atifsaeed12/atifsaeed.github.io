@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Atif Saeed — Trustworthy &amp; Adaptive AI</title>
+<meta name="description" content="Muhammad Atif Saeed is a Lecturer at FAST-NUCES Islamabad and Ph.D. researcher building trustworthy, adaptive AI systems for continual learning, federated intelligence, and financial forecasting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233A;
+    --ink-2:#233350;
+    --paper:#0F1B2D;
+    --line: rgba(22,35,58,0.12);
+    --line-strong: rgba(22,35,58,0.22);
+    --verified:#2F9E6E;
+    --verified-dim: rgba(47,158,110,0.14);
+    --amber:#B8681E;
+    --text-soft: rgba(22,35,58,0.68);
+    --text-softer: rgba(22,35,58,0.48);
+    --glass: rgba(255,255,255,0.42);
+    --glass-strong: rgba(255,255,255,0.62);
+    --glass-border: rgba(255,255,255,0.75);
+    --glass-shadow: 0 8px 32px rgba(31,45,64,0.10), 0 1px 2px rgba(31,45,64,0.06);
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --maxw: 1080px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;} }
+
+  body{
+    background-color:#ffffff;
+    background-image:
+      linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 48%, #ffffff 82%),
+      linear-gradient(128deg, #a3dfe7 0%, #c9eec0 38%, #e8fbb8 68%, #f6fceb 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: 100% 100vh, 100% 100vh;
+    background-position: top center, top center;
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  ::selection{ background:var(--verified); color:#fff; }
+
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 32px; position:relative; z-index:1;}
+
+  /* -------- Glass utility -------- */
+  .glass{
+    background:var(--glass);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border:1px solid var(--glass-border);
+    box-shadow:var(--glass-shadow);
+  }
+
+  /* -------- Nav -------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    background:rgba(255,255,255,0.55);
+    border-bottom:1px solid var(--glass-border);
+  }
+  .navrow{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 32px; max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{
+    font-family:var(--serif); font-weight:600; font-size:19px; letter-spacing:0.01em;
+    display:flex; align-items:center; gap:10px; color:var(--ink);
+  }
+  .brand .mark{
+    width:9px; height:9px; border-radius:50%;
+    background:var(--verified);
+    box-shadow:0 0 0 3px var(--verified-dim);
+    flex-shrink:0;
+  }
+  nav.links{ display:flex; gap:2px; align-items:center; }
+  nav.links a{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--text-soft);
+    padding:9px 14px; border-radius:6px;
+    transition: color .15s ease, background .15s ease;
+  }
+  nav.links a:hover{ color:var(--ink); background:rgba(22,35,58,0.06); }
+  nav.links a.ext{ color:var(--verified); }
+  nav.links a.ext:hover{ color:#227e58; }
+  .navtoggle{ display:none; }
+
+  @media (max-width: 780px){
+    nav.links{ display:none; }
+    .navtoggle{
+      display:flex; align-items:center; justify-content:center;
+      width:36px; height:36px; border:1px solid var(--line-strong); border-radius:8px;
+      background:rgba(255,255,255,0.5); color:var(--ink); cursor:pointer;
+    }
+    nav.links.open{
+      display:flex; flex-direction:column; align-items:flex-start;
+      position:absolute; top:100%; left:0; right:0;
+      background:rgba(255,255,255,0.85); backdrop-filter: blur(18px);
+      border-bottom:1px solid var(--glass-border);
+      padding:8px 32px 18px;
+    }
+    nav.links.open a{ width:100%; padding:12px 4px; border-bottom:1px solid var(--line); }
+  }
+
+  /* -------- Hero -------- */
+  .hero{
+    padding:96px 0 84px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{ display:grid; grid-template-columns: 1fr auto; gap:56px; align-items:center; }
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--verified); display:flex; align-items:center; gap:9px; margin-bottom:22px;
+  }
+  .eyebrow .dash{ width:22px; height:1px; background:var(--verified); display:inline-block; }
+  h1.name{
+    font-family:var(--serif); font-weight:600; font-size:clamp(38px,5.6vw,60px);
+    line-height:1.06; letter-spacing:-0.01em; margin-bottom:16px; color:var(--ink);
+  }
+  .role{ font-size:18px; color:var(--text-soft); margin-bottom:22px; font-weight:500; }
+  .thesis{
+    font-family:var(--serif); font-style:italic; font-weight:500;
+    font-size:clamp(18px,2.1vw,22px); line-height:1.5;
+    color:rgba(22,35,58,0.86);
+    max-width:640px;
+    border-left:2px solid var(--verified);
+    padding-left:18px;
+    margin-bottom:34px;
+  }
+  .hero-links{ display:flex; flex-wrap:wrap; gap:10px; }
+  .btn{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.03em;
+    padding:11px 18px; border-radius:8px; border:1px solid var(--glass-border);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:border-color .15s ease, background .15s ease, transform .15s ease, box-shadow .15s ease;
+    background:var(--glass); color:var(--ink); cursor:pointer;
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    box-shadow: 0 2px 12px rgba(31,45,64,0.06);
+  }
+  .btn:hover{ border-color:var(--verified); background:rgba(255,255,255,0.65); transform:translateY(-1px); box-shadow:0 6px 18px rgba(31,45,64,0.10); }
+  .btn.primary{ background:var(--verified); color:#fff; border-color:var(--verified); font-weight:600; box-shadow:0 6px 18px rgba(47,158,110,0.28);}
+  .btn.primary:hover{ background:#279065; }
+
+  .portrait-wrap{ position:relative; }
+  .portrait{
+    width:172px; height:172px; border-radius:20px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .portrait .initials{
+    font-family:var(--serif); font-weight:600; font-size:56px; color:var(--verified);
+    letter-spacing:0.02em;
+  }
+  .portrait-tag{
+    position:absolute; bottom:-13px; left:50%; transform:translateX(-50%);
+    background:var(--verified); color:#fff;
+    font-family:var(--mono); font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase;
+    padding:4px 10px; border-radius:20px; font-weight:600; white-space:nowrap;
+    box-shadow:0 6px 16px rgba(47,158,110,0.35);
+  }
+  @media (max-width:780px){
+    .hero .wrap{ grid-template-columns:1fr; text-align:left; }
+    .portrait-wrap{ order:-1; margin-bottom:8px; }
+  }
+
+  /* -------- Section shell -------- */
+  section{ padding:64px 0; position:relative; }
+  .sec-head{ display:flex; align-items:baseline; gap:16px; margin-bottom:40px; }
+  .sec-num{ font-family:var(--mono); font-size:12.5px; color:var(--text-softer); }
+  h2.sec-title{
+    font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.4vw,34px);
+    letter-spacing:-0.01em; color:var(--ink);
+  }
+  .sec-rule{ flex:1; height:1px; background:var(--line-strong); }
+  .sec-lede{ color:var(--text-soft); max-width:680px; margin-bottom:36px; font-size:15.5px; }
+
+  /* Each section body sits in one glass panel */
+  .panel{
+    border-radius:20px;
+    padding:44px 44px 48px;
+  }
+  @media (max-width:640px){ .panel{ padding:28px 22px 32px; } }
+
+  /* -------- About -------- */
+  .about-grid{ display:grid; grid-template-columns: 1.5fr 1fr; gap:56px; }
+  .about-body p{ margin-bottom:16px; color:rgba(22,35,58,0.86); font-size:16px; max-width:62ch;}
+  .about-body strong{ color:var(--ink); font-weight:600; }
+  .about-body a{ color:var(--verified); border-bottom:1px solid var(--verified-dim); }
+  .about-body a:hover{ border-color:var(--verified); }
+  .about-cta{ margin-top:24px; display:flex; gap:10px; flex-wrap:wrap; }
+
+  .facts{
+    border-radius:14px; overflow:hidden; align-self:start;
+    background:rgba(255,255,255,0.4); border:1px solid var(--glass-border);
+    backdrop-filter: blur(16px) saturate(160%); -webkit-backdrop-filter: blur(16px) saturate(160%);
+  }
+  .fact{ display:flex; justify-content:space-between; gap:12px; padding:14px 18px; border-bottom:1px solid var(--line); font-size:14px;}
+  .fact:last-child{ border-bottom:none; }
+  .fact .k{ font-family:var(--mono); color:var(--text-softer); font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  .fact .v{ color:var(--ink); text-align:right; font-weight:500; }
+
+  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* -------- Research interests (tag cloud) -------- */
+  .tagcloud{ display:flex; flex-wrap:wrap; gap:9px; margin-bottom:40px; }
+  .tagcloud .tag{
+    font-family:var(--mono); font-size:12.5px; color:rgba(22,35,58,0.82);
+    border:1px solid var(--glass-border); background:rgba(255,255,255,0.4);
+    padding:8px 14px; border-radius:20px;
+    transition:border-color .15s ease, color .15s ease, background .15s ease;
+  }
+  .tagcloud .tag:hover{ border-color:var(--verified); color:var(--verified); background:var(--verified-dim); }
+
+  .research-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+  .research-card{
+    border-radius:14px; padding:24px 24px 22px;
+    background:rgba(255,255,255,0.38);
+    border:1px solid var(--glass-border);
+  }
+  .research-card .rc-title{ font-family:var(--serif); font-weight:600; font-size:18px; margin-bottom:9px; color:var(--ink); }
+  .research-card p{ color:var(--text-soft); font-size:14.5px; }
+  @media (max-width:700px){ .research-grid{ grid-template-columns:1fr; } }
+
+  .collab-note{
+    margin-top:32px; padding:20px 22px; border-radius:14px;
+    border:1px dashed var(--line-strong); background:rgba(47,158,110,0.06);
+    font-size:14.5px; color:var(--text-soft); display:flex; gap:14px; align-items:flex-start;
+  }
+  .collab-note .stamp{
+    font-family:var(--mono); font-size:11px; color:var(--verified); border:1px solid var(--verified);
+    padding:4px 8px; border-radius:6px; text-transform:uppercase; letter-spacing:0.05em; flex-shrink:0; margin-top:1px;
+  }
+
+  /* -------- News (ledger list) -------- */
+  .news-list{
+    border-radius:16px; padding:8px 24px;
+    background:rgba(255,255,255,0.38); border:1px solid var(--glass-border);
+    backdrop-filter: blur(18px) saturate(160%); -webkit-backdrop-filter: blur(18px) saturate(160%);
+    box-shadow:var(--glass-shadow);
+  }
+  .news-item{
+    display:grid; grid-template-columns:104px 1fr; gap:20px;
+    padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .news-item:last-child{ border-bottom:none; }
+  .news-item .date{ font-family:var(--mono); font-size:13px; color:var(--verified); padding-top:2px; }
+  .news-item .desc{ font-size:15px; color:rgba(22,35,58,0.86); }
+  .news-item .desc strong{ color:var(--ink); font-weight:600; }
+  @media (max-width:600px){ .news-item{ grid-template-columns:1fr; gap:6px; } }
+
+  /* -------- Publications (pointer style) -------- */
+  .pub-pointer{
+    border-radius:16px;
+    padding:36px 34px;
+    background:rgba(47,158,110,0.06);
+    border:1px solid var(--glass-border);
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .pub-pointer h3{ font-family:var(--serif); font-size:22px; font-weight:600; max-width:520px; color:var(--ink); }
+  .pub-pointer p{ color:var(--text-soft); font-size:14.5px; max-width:600px; }
+  .venue-chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:4px; }
+  .venue-chips .chip{
+    font-family:var(--mono); font-size:11.5px; color:var(--text-softer);
+    border:1px solid var(--line-strong); background:rgba(255,255,255,0.45);
+    padding:5px 11px; border-radius:6px;
+  }
+
+  /* -------- Portfolio pillars -------- */
+  .pillars{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:36px;}
+  .pillar{
+    border-radius:14px; padding:24px;
+    background:rgba(255,255,255,0.38);
+    border:1px solid var(--glass-border);
+  }
+  .pillar h4{ font-family:var(--serif); font-size:17px; font-weight:600; margin-bottom:10px; color:var(--ink); }
+  .pillar p{ font-size:13.5px; color:var(--text-soft); }
+  @media (max-width:700px){ .pillars{ grid-template-columns:1fr; } }
+
+  /* -------- Teaching -------- */
+  .course-list{ display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; }
+  .course-list .course{
+    font-family:var(--mono); font-size:13px; color:rgba(22,35,58,0.85);
+    border:1px solid var(--glass-border); background:rgba(255,255,255,0.4);
+    padding:10px 15px; border-radius:8px;
+  }
+
+  /* -------- Experience / education timelines -------- */
+  .split{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
+  .subsec h3{ font-family:var(--serif); font-size:19px; font-weight:600; margin-bottom:18px; color:var(--ink); }
+  .timeline-item{ display:flex; gap:16px; padding-bottom:18px; }
+  .timeline-item .tdate{ font-family:var(--mono); font-size:12px; color:var(--verified); flex-shrink:0; width:112px; padding-top:2px;}
+  .timeline-item .tdesc{ font-size:14.5px; color:rgba(22,35,58,0.86); }
+  .timeline-item .tdesc .role{ color:var(--ink); font-weight:600; display:block; margin-bottom:2px; }
+  @media (max-width:780px){ .split{ grid-template-columns:1fr; gap:40px; } }
+
+  /* -------- Students -------- */
+  .students-box{
+    border-radius:16px; padding:28px 30px;
+    background:rgba(255,255,255,0.38);
+    border:1px solid var(--glass-border);
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .students-box p{ color:rgba(22,35,58,0.86); font-size:15px; max-width:64ch; }
+
+  /* -------- Services -------- */
+  .services-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .service-card{
+    border-radius:14px; padding:24px;
+    background:rgba(255,255,255,0.38);
+    border:1px solid var(--glass-border);
+  }
+  .service-card .sc-k{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--verified); margin-bottom:12px; display:block;}
+  .service-card p{ font-size:14px; color:rgba(22,35,58,0.82); }
+  @media (max-width:860px){ .services-grid{ grid-template-columns:1fr; } }
+
+  /* -------- Scholar CTA -------- */
+  .scholar-box{
+    border-radius:20px;
+    padding:44px 40px; text-align:center;
+    display:flex; flex-direction:column; align-items:center; gap:18px;
+    background:rgba(255,255,255,0.5); border:1px solid var(--glass-border);
+    backdrop-filter: blur(20px) saturate(160%); -webkit-backdrop-filter: blur(20px) saturate(160%);
+    box-shadow:var(--glass-shadow);
+  }
+  .scholar-box h3{ font-family:var(--serif); font-size:clamp(22px,3vw,28px); font-weight:600; max-width:560px; color:var(--ink); }
+  .scholar-box p{ color:var(--text-soft); font-size:14.5px; max-width:520px; }
+
+  /* -------- Contact / Footer -------- */
+  .contact-box{ display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+  .contact-card{
+    border-radius:16px; padding:28px 30px;
+    background:rgba(255,255,255,0.4);
+    border:1px solid var(--glass-border);
+  }
+  .contact-card .cname{ font-family:var(--serif); font-size:20px; font-weight:600; margin-bottom:6px; color:var(--ink); }
+  .contact-card .crole{ font-size:14px; color:var(--text-soft); margin-bottom:18px; }
+  .contact-line{ display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:14px; }
+  .contact-line:last-child{ border-bottom:none; }
+  .contact-line .k{ font-family:var(--mono); color:var(--text-softer); font-size:12px; text-transform:uppercase; letter-spacing:0.04em; }
+  .contact-line .v a{ color:var(--verified); }
+  .contact-line .v a:hover{ color:#227e58; }
+  .contact-note{ font-size:14.5px; color:var(--text-soft); align-self:center; }
+  @media (max-width:780px){ .contact-box{ grid-template-columns:1fr; } }
+
+  footer{ padding:40px 0 60px; }
+  .footer-row{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:13px; color:var(--text-softer); font-family:var(--mono); }
+  .footer-links{ display:flex; gap:16px; }
+  .footer-links a:hover{ color:var(--verified); }
+
+  h2.sec-title, h1.name{ scroll-margin-top: 84px; }
+  section{ scroll-margin-top: 70px; }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--verified); outline-offset:2px; border-radius:6px;
+  }
+
+  /* Unified glass blur for all card-style boxes */
+  .research-card, .pillar, .service-card, .contact-card, .students-box, .pub-pointer, .collab-note{
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    box-shadow: 0 4px 20px rgba(31,45,64,0.06);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="navrow">
+    <a class="brand" href="#about"><span class="mark"></span>Muhammad Atif Saeed</a>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#community">Services</a>
+      <a class="ext" href="https://scholar.google.com/citations?user=4qN9-tkAAAAJ&hl=en" target="_blank" rel="noopener">Scholar ↗</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><span class="dash"></span>Lecturer, FAST-NUCES Islamabad · Ph.D. Researcher</div>
+      <h1 class="name">Muhammad Atif Saeed</h1>
+      <div class="role">Trustworthy &amp; Adaptive AI — continual learning, federated intelligence, financial forecasting</div>
+      <p class="thesis">I build AI systems that keep learning from changing environments without forgetting, staying robust, explainable, and privacy-preserving along the way.</p>
+      <div class="hero-links">
+        <a class="btn primary" href="#research">View research</a>
+        <a class="btn" href="mailto:atif.saeed@isb.nu.edu.pk">Email</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=4qN9-tkAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a class="btn" href="https://www.linkedin.com/in/atifsaeedarts/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="portrait glass"><span class="initials">MA</span></div>
+      <span class="portrait-tag">Verified · Ph.D. Researcher</span>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">About</h2><span class="sec-rule"></span></div>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>I am a <strong>Lecturer in Computer Science at FAST National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad</strong>, and a Ph.D. researcher in Computer Science. My research focuses on developing trustworthy and adaptive artificial intelligence systems that can learn continuously from dynamic environments while maintaining robustness, explainability, and privacy.</p>
+        <p>My primary research interests span <strong>Machine Learning, Deep Learning, Continual Learning, Federated Learning and Unlearning, Trustworthy AI, Large Language Models, Financial Time-Series Forecasting, Medical AI, and Computer Vision</strong>. My current doctoral research investigates continual learning frameworks for non-stationary financial markets, integrating adaptive neural architectures with temporal knowledge retention to improve long-term stock market forecasting performance.</p>
+        <p>Beyond financial AI, I work on privacy-preserving federated learning, explainable medical image analysis, multimodal intelligence, retrieval-augmented generation (RAG), and trustworthy LLM systems. My goal is to build intelligent systems that remain reliable under distribution shifts while providing interpretable and reproducible decision-making.</p>
+        <p>I have authored and co-authored research articles, book chapters, and conference papers in artificial intelligence and data science, appearing in international venues covering machine learning, healthcare AI, recommender systems, federated learning, and financial analytics. I actively collaborate with researchers and supervise undergraduate and postgraduate research projects in these areas.</p>
+        <p>Before joining FAST-NUCES, I served as a Lecturer at SZABIST Islamabad and as an Associate Lecturer at Capital University of Science and Technology (CUST), teaching undergraduate and graduate courses in software engineering, machine learning, programming, and data science.</p>
+        <div class="about-cta">
+          <a class="btn" href="#research">Research program</a>
+          <a class="btn" href="#students">Work with me</a>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact"><span class="k">Position</span><span class="v">Lecturer, FAST-NUCES</span></div>
+        <div class="fact"><span class="k">Location</span><span class="v">Islamabad, Pakistan</span></div>
+        <div class="fact"><span class="k">Status</span><span class="v">Ph.D. Researcher, CS</span></div>
+        <div class="fact"><span class="k">Focus</span><span class="v">Continual &amp; Trustworthy AI</span></div>
+        <div class="fact"><span class="k">Email</span><span class="v"><a href="mailto:atif.saeed@isb.nu.edu.pk" style="border-bottom:1px solid var(--verified-dim)">atif.saeed@isb.nu.edu.pk</a></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">News</h2><span class="sec-rule"></span></div>
+    <div class="news-list">
+      <div class="news-item"><span class="date">2026</span><span class="desc">Continuing Ph.D. research on <strong>continual learning for financial time-series forecasting</strong>.</span></div>
+      <div class="news-item"><span class="date">2025 —</span><span class="desc">Serving as <strong>Lecturer</strong> at FAST National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad.</span></div>
+      <div class="news-item"><span class="date">Ongoing</span><span class="desc">Active research in <strong>continual learning, trustworthy AI, federated learning</strong>, and medical artificial intelligence.</span></div>
+      <div class="news-item"><span class="date">Ongoing</span><span class="desc">Publishing in international journals and conferences in machine learning and artificial intelligence.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Research</h2><span class="sec-rule"></span></div>
+    <p class="sec-lede">My research aims to build intelligent systems capable of learning continuously from dynamic data while remaining robust, interpretable, and privacy-preserving — spanning methodological ML research and domain-specific applications in finance, healthcare, and intelligent decision support.</p>
+
+    <div class="tagcloud">
+      <span class="tag">Continual Learning</span>
+      <span class="tag">Financial Time-Series Forecasting</span>
+      <span class="tag">Federated Learning &amp; Unlearning</span>
+      <span class="tag">Trustworthy &amp; Explainable AI</span>
+      <span class="tag">Large Language Models</span>
+      <span class="tag">Retrieval-Augmented Generation</span>
+      <span class="tag">Medical Image Analysis</span>
+      <span class="tag">Deep Learning &amp; Computer Vision</span>
+      <span class="tag">Sequential Decision Making</span>
+      <span class="tag">Knowledge Graphs</span>
+      <span class="tag">Privacy-Preserving ML</span>
+      <span class="tag">AI for Cybersecurity</span>
+    </div>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="rc-title">Continual learning for financial forecasting</div>
+        <p>Adaptive deep learning models for non-stationary stock market prediction using continual learning and temporal knowledge retention.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-title">Federated learning and unlearning</div>
+        <p>Privacy-preserving distributed learning with certified machine unlearning, explainability, and robustness against heterogeneous client distributions.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-title">Trustworthy large language models</div>
+        <p>Hallucination detection, citation verification, retrieval-augmented generation, and reliable inference for LLM-based systems.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-title">Medical artificial intelligence</div>
+        <p>Deep learning, explainable AI, and federated learning methods for disease diagnosis using medical imaging and clinical data.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-title">Recommendation systems</div>
+        <p>Intelligent recommendation models using graph neural networks, attention mechanisms, and multimodal representation learning.</p>
+      </div>
+      <div class="research-card">
+        <div class="rc-title">Doctoral research</div>
+        <p>Continual learning frameworks for stock market prediction that adapt to changing market regimes while mitigating catastrophic forgetting through efficient memory and knowledge retention.</p>
+      </div>
+    </div>
+
+    <div class="collab-note">
+      <span class="stamp">Open</span>
+      <div>Open to research collaboration involving trustworthy AI, continual learning, federated intelligence, and real-world machine learning applications.</div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Publications</h2><span class="sec-rule"></span></div>
+    <p class="sec-lede">Research articles, book chapters, and conference papers in artificial intelligence and data science.</p>
+    <div class="pub-pointer">
+      <h3>My research has appeared in international journals and conferences covering machine learning, healthcare AI, recommender systems, federated learning, and financial analytics.</h3>
+      <p>For an up-to-date, complete list of publications with citation counts and co-author details, please visit my Google Scholar profile.</p>
+      <div class="venue-chips">
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Healthcare AI</span>
+        <span class="chip">Recommender Systems</span>
+        <span class="chip">Federated Learning</span>
+        <span class="chip">Financial Analytics</span>
+      </div>
+      <div>
+        <a class="btn primary" href="https://scholar.google.com/citations?user=4qN9-tkAAAAJ&hl=en" target="_blank" rel="noopener">View full list on Google Scholar →</a>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <h4>Financial AI</h4>
+        <p>Continual learning frameworks, adaptive neural architectures, and temporal knowledge retention for non-stationary market forecasting.</p>
+      </div>
+      <div class="pillar">
+        <h4>Federated &amp; Privacy-Preserving ML</h4>
+        <p>Distributed learning, certified unlearning, and robustness under heterogeneous client distributions.</p>
+      </div>
+      <div class="pillar">
+        <h4>Medical &amp; Multimodal AI</h4>
+        <p>Explainable medical image analysis, multimodal intelligence, and disease diagnosis using imaging and clinical data.</p>
+      </div>
+      <div class="pillar">
+        <h4>Trustworthy LLMs</h4>
+        <p>RAG, hallucination detection, citation verification, and reliable inference for LLM-based systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Teaching</h2><span class="sec-rule"></span></div>
+    <p class="sec-lede">I am currently a Lecturer at the Department of Computer Science, FAST National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad. I enjoy teaching both undergraduate and graduate students while supervising research projects in machine learning, artificial intelligence, computer vision, natural language processing, and data science.</p>
+    <div class="course-list">
+      <span class="course">Machine Learning</span>
+      <span class="course">Advanced Machine Learning</span>
+      <span class="course">Fundamentals of Software Engineering</span>
+      <span class="course">Applied Programming</span>
+      <span class="course">Object-Oriented Programming</span>
+      <span class="course">Data Science</span>
+      <span class="course">Software Engineering</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Experience &amp; education</h2><span class="sec-rule"></span></div>
+    <div class="split">
+      <div class="subsec">
+        <h3>Experience</h3>
+        <div class="timeline-item">
+          <span class="tdate">2025 — Now</span>
+          <span class="tdesc"><span class="role">Lecturer</span>FAST National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad</span>
+        </div>
+        <div class="timeline-item">
+          <span class="tdate">Previously</span>
+          <span class="tdesc"><span class="role">Lecturer</span>SZABIST, Islamabad</span>
+        </div>
+        <div class="timeline-item">
+          <span class="tdate">Previously</span>
+          <span class="tdesc"><span class="role">Associate Lecturer</span>Capital University of Science and Technology (CUST), Islamabad</span>
+        </div>
+      </div>
+      <div class="subsec">
+        <h3>Education</h3>
+        <div class="timeline-item">
+          <span class="tdate">In progress</span>
+          <span class="tdesc"><span class="role">Ph.D., Computer Science</span>Continual learning for non-stationary financial markets</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="students">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Students</h2><span class="sec-rule"></span></div>
+    <div class="students-box">
+      <p>I welcome motivated undergraduate and postgraduate students interested in research in machine learning and artificial intelligence — particularly continual learning, federated learning, trustworthy AI, financial forecasting, medical AI, computer vision, and large language models.</p>
+      <p>If you're interested in working with me, please reach out with your CV, research interests, and a brief description of your proposed research direction.</p>
+      <div>
+        <a class="btn primary" href="mailto:atif.saeed@isb.nu.edu.pk">Get in touch →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="community">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Services</h2><span class="sec-rule"></span></div>
+    <p class="sec-lede">I regularly serve as a reviewer for international journals and conferences in artificial intelligence, machine learning, deep learning, healthcare informatics, and data science.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="sc-k">Peer review</span>
+        <p>Reviewer for international journals and conferences spanning AI, ML, deep learning, healthcare informatics, and data science.</p>
+      </div>
+      <div class="service-card">
+        <span class="sc-k">Collaboration</span>
+        <p>Interdisciplinary collaborations across academia and industry, developing reliable and scalable AI systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scholar" id="scholar-cta">
+  <div class="wrap">
+    <div class="scholar-box">
+      <span class="eyebrow" style="margin-bottom:0;"><span class="dash"></span>Full record</span>
+      <h3>The complete, continuously updated publication record lives on Google Scholar.</h3>
+      <p>Citation counts, co-author lists, and the full body of published work are tracked there.</p>
+      <a class="btn primary" href="https://scholar.google.com/citations?user=4qN9-tkAAAAJ&hl=en" target="_blank" rel="noopener">Open Google Scholar profile ↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">Contact</h2><span class="sec-rule"></span></div>
+    <div class="contact-box">
+      <div class="contact-card">
+        <div class="cname">Muhammad Atif Saeed</div>
+        <div class="crole">Lecturer, Department of Computer Science<br>FAST National University of Computer and Emerging Sciences (FAST-NUCES)<br>Islamabad, Pakistan</div>
+        <div class="contact-line"><span class="k">Email</span><span class="v"><a href="mailto:atif.saeed@isb.nu.edu.pk">atif.saeed@isb.nu.edu.pk</a></span></div>
+        <div class="contact-line"><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/atifsaeedarts/" target="_blank" rel="noopener">atifsaeedarts</a></span></div>
+        <div class="contact-line"><span class="k">Scholar</span><span class="v"><a href="https://scholar.google.com/citations?user=4qN9-tkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a></span></div>
+      </div>
+      <p class="contact-note">Research areas: Machine Learning, Continual Learning, Federated Learning, Trustworthy AI, Large Language Models, Financial AI, Medical AI. For research collaboration, student supervision, or academic discussions, feel free to reach out via email or connect on LinkedIn and Google Scholar.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>Last updated July 2026</span>
+    <div class="footer-links">
+      <a href="mailto:atif.saeed@isb.nu.edu.pk">Email</a>
+      <a href="https://scholar.google.com/citations?user=4qN9-tkAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+      <a href="https://www.linkedin.com/in/atifsaeedarts/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if(toggle){
+    toggle.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+    });
+  }
+</script>
+
+</body>
+</html>
